@@ -1,0 +1,44 @@
+server:
+  port: 8081
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+  datasource:
+    url: ${POSTGRES_URL}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate.jdbc.time_zone: UTC
+  mail:
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.connectiontimeout: 5000
+      mail.smtp.timeout: 5000
+      mail.smtp.writetimeout: 5000
+      mail.smtp.host: ${MAIL_HOST}
+      mail.smtp.port: ${MAIL_PORT}
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+      mail.smtp.starttls.auth.mechanisms: ${MAIL_AUTH_MECHANISMS}
+      mail.smtp.username: ${MAIL_USERNAME}
+      mail.smtp.clientSecret: ${MAIL_CLIENT_SECRET}
+      mail.smtp.sendingEnabled: ${MAIL_SENDING_ENABLE}
+
+user-server: ${USER_SERVICE_URL}
+
+jwt:
+  properties:
+    privateKeyPath: ${JWT_PRIVATE_KEY}
+    accessExpiredTime: ${JWT_ACCESS_EXPIRED_TIME}
+    refreshExpiredTime: ${JWT_REFRESH_EXPIRED_TIME}
+
+confirmation:
+  code:
+    expired:
+      time: ${CONFIRMATION_CODE_EXPIRED_TIME}

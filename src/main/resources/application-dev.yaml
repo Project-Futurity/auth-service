@@ -1,0 +1,27 @@
+user-server: http://localhost:8082
+jwt:
+  properties:
+    privateKeyPath: private_key.pem
+    accessExpiredTime: 1
+    refreshExpiredTime: 15
+
+confirmation:
+  code:
+    expired:
+      time: 24
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+  jpa:
+    show-sql: true
+  mail:
+    sendingEnabled: false
+    username:
+    clientSecret:
+    properties:
+      mail.smtp.host:
+      mail.smtp.port:
+      mail.smtp.auth.mechanisms:
