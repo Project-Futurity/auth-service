@@ -33,7 +33,7 @@ public class OAuth2Service {
     }
 
     private void readClients() {
-        String json = FileReader.readFileToString(emailProperties.getClientSecret());
+        String json = FileReader.readAbsoluteFile(emailProperties.getClientSecret());
         inputStream = new ByteArrayInputStream(json.getBytes());
     }
 }

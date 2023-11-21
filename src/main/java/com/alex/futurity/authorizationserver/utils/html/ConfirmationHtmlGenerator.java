@@ -12,7 +12,7 @@ public class ConfirmationHtmlGenerator implements HtmlGenerator {
 
     @PostConstruct
     private void loadHtmlFile() {
-        html = FileReader.readFileToString(CONFIRMATION_PATH);
+        html = FileReader.readClasspathFile(CONFIRMATION_PATH);
     }
 
     @Override
