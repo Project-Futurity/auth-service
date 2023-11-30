@@ -9,7 +9,7 @@
     </parent>
 
     <groupId>com.alex.futurity</groupId>
-    <artifactId>authorization-server</artifactId>
+    <artifactId>auth-service</artifactId>
     <version>1.0</version>
 
     <dependencyManagement>
