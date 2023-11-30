@@ -1,9 +1,7 @@
 package com.alex.futurity.authorizationserver.service;
 
 import com.alex.futurity.authorizationserver.dto.*;
-import com.alex.futurity.authorizationserver.exception.ClientSideException;
 import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
